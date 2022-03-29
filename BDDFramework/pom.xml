@@ -31,6 +31,14 @@
     <artifactId>cucumber-testng</artifactId>
     <version>6.11.0</version>
 </dependency>
+  <!-- For Dependency injection -->
+  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>6.11.0</version>
+    <scope>test</scope>
+</dependency>
   
   
   <!-- GUI automation:- Selenium -->
@@ -47,6 +55,12 @@
     <groupId>io.github.bonigarcia</groupId>
     <artifactId>webdrivermanager</artifactId>
     <version>5.0.3</version>
+</dependency>
+  <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+<dependency>
+    <groupId>com.google.inject</groupId>
+    <artifactId>guice</artifactId>
+    <version>5.1.0</version>
 </dependency>
   
   </dependencies>
