@@ -19,9 +19,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import pagefactory.LoginPage;
 import util.Base;
 import util.Pages;
+import util.WebDriverUtil;
 
 //To import all ctrl+Shift+O
-public class DataDrivenTest{
+public class DataDrivenTest extends WebDriverUtil{
 	private Base base;
 	public DataDrivenTest(Base base) {
 		this.base=base;
@@ -94,8 +95,9 @@ public class DataDrivenTest{
 	public void from_dropdown_select_industry_type_as(String industryType) {
 		//WebElement industryDropDown=base.driver.findElement(By.name("industry"));
 		WebElement industryDropDown=Pages.createNewOrganizationPage.getIndustryDropDown();
-		Select select=new Select(industryDropDown);
-		select.selectByValue(industryType);
+//		Select select=new Select(industryDropDown);
+//		select.selectByValue(industryType);
+		dropdownByValue(industryDropDown, industryType);
 		//base.driver.findElement(By.xpath("//*[@title='Save [Alt+S]']")).click(); 
 		Pages.createNewOrganizationPage.getSaveButton().click();
 	}

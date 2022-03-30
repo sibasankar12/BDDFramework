@@ -9,12 +9,14 @@ Feature: DataDriven Testing
     And click on login
     When Home page is displayed click on create organization
 
-@Fast
+
+@SmokeTest
   Scenario: Already user in Home page and want create new organization with mandatory fileds
     And click on create new organization Image icon
     And enter organization name as "Google"
     Then Validate whether organization is created with name "Google"
 
+@RegressionTest
   Scenario Outline: I want create multiple organization with organization name and industry type
     And click on create new organization Image icon
     And enter organization name "<organizationName>"
@@ -27,6 +29,7 @@ Feature: DataDriven Testing
       | Mintra           | Manufacturing |
       | Google           | Engineering   |
 
+@End2End 
   Scenario: Read data from data table
     When I want to read data from below table
       | Java       | Programming langauge |

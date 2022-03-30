@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -27,7 +29,8 @@ public class Hook extends WebDriverUtil{
 	@Before//(order = 1)
 	public void beforeScenario() throws Throwable {
 		//System.out.println(" 2nd Execute before each scenario's order:1");
-		String browser=PropertyFileutil.getPropertyValue("browser");
+		//String browser=PropertyFileutil.getPropertyValue("browser");
+		String browser=System.getProperty("browserName");
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			base.driver=new ChromeDriver();
@@ -48,6 +51,9 @@ public class Hook extends WebDriverUtil{
 		if(scenario.isFailed()) {
 			//screenshot code
 			takeScreenshot(base.driver, scenario.getName());
+			TakesScreenshot ts=(TakesScreenshot)(base.driver);
+			byte[] imageBytes = ts.getScreenshotAs(OutputType.BYTES);
+			scenario.attach(imageBytes, "image/png", scenario.getName());
 		}
 		base.driver.close();
 	}

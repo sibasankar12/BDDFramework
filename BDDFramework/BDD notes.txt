@@ -1,0 +1,175 @@
+BDD :- Behaviour driven development
+Cucumber is also a unit testing framework
+Cucumber is developed by Ruby language
+Cucumber is a testing tool that supports Behavior Driven Development (BDD).
+ It offers a way to write tests that anybody can understand, regardless of their technical knowledge. 
+In BDD, users (business analysts, product owners) first write scenarios or acceptance tests that describe the behavior of the system from the customer’s
+ perspective, for review and sign-off by the product owners before developers write their codes.
+
+Smart Bear:- company:- zephyr and Soap UI
+
+What is BDD?
+BDD is a way for software teams to work that closes the gap between business people and technical people by:
+
+Encouraging collaboration across roles to build shared understanding of the problem to be solved
+Working in rapid, small iterations to increase feedback and the flow of value
+Producing system documentation that is automatically checked against the system’s behaviour
+We do this by focusing collaborative work around concrete, real-world examples that illustrate how we want the system to behave. 
+We use those examples to guide us from concept through to implementation, in a process of continuous collaboration.
+
+
+Cucumber Feature File consist of following components –
+Features file contain high level description of the Test Scenario in simple language. It is known as Gherkin. Gherkin is a plain English text language`
+Feature: A feature would describe the current test script which has to be executed.
+Scenario: Scenario describes the steps and expected outcome for a particular test case.
+Scenario Outline: Same scenario can be executed for multiple sets of data using scenario outline. The data is provided by a tabular structure separated by (I I).
+Given: It specifies the context of the text to be executed. By using datatables "Given", step can also be parameterized.
+When: "When" specifies the test action that has to performed
+Then: The expected outcome of the test can be represented by "Then"
+
+Login.feature
+Scenario: I want to login to Vtiger app
+Given user launch the browser and enter the url
+When As a valid user i enter valid username and valid password
+And I will click on login button
+Then Home page is displayed
+
+Scenario: I want to login to vtiger by using inavlid user name and password
+Given user launch the browser and enter the url
+When user enter invalid username and password and click on login button
+Then Error message should be displayed
+
+StepDefinition: 
+What is "Step Definition"?
+Step definition maps the Test Case Steps in the feature files(introduced by Given/When/Then) to code. 
+It which executes the steps on Application Under Test and checks the outcomes against expected results. 
+For a step definition to be executed, it must match the given component in a feature
+
+Runner class:-
+As Cucumber uses Junit/TestNG we need to have a Test Runner class. This class will use the Junit annotation @RunWith() or
+ @CucumberOptions, which tells JUnit/TestNg what is the test runner class. 
+It more like a starting point for Junit/TestNG to start executing your tests. In the src folder create a class called TestRunner.
+
+Webdriver driver;
+@Given("^user launch the browser and enter the url$")
+public void user_launch_the_browser_and_enter_the_url()
+{
+driver=new chromedriver();
+driver.get("http://localhost:8080")
+}
+@When("^As a valid user i enter valid username and valid password$")
+public void As_a_valid_user_i_enter_valid_username_and_valid_password(){
+driver.findelement().sendkeys("username");
+
+}
+@Then
+
+Runner class: -
+
+@cucumberOption
+{
+features={"path of feature file"},
+glue={"path of step definition class"}
+}
+-----------------------------------------------------
+dependency
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-core</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>6.9.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.8.1</version>
+</dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>3.141.59</version>
+</dependency>
+    <dependency>
+    <groupId>com.vimalselvam</groupId>
+    <artifactId>cucumber-extentsreport</artifactId>
+    <version>3.1.1</version>
+</dependency>
+    <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.1</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-picocontainer</artifactId>
+    <version>6.9.1</version>
+    <scope>test</scope>
+</dependency>
+
+
+-----------------------------------------
+feature file:- it contains scenarios and secenrio ouline
+-> In feature we write scenario by using gherkin keywords(Given,When,Then, And)
+
+StepDefinition:- It is a class which contains all the step implementation presnt in feature file
+
+Runner:- It is used to map the feature file and step definition 
+-> here in runner we use cucumber options like 
+	--> feature:- here we are passing path of feature file
+		---> arg:- string[]
+	--> glue:- glue will define the step definition location provided to the scenario steps
+		---> arg:- string[]
+	--> dryRun:- It will check all feature file steps having step definition or not
+		   It will not participate in exceution but it will check all the step have step defition or not
+		--->arg:- boolean
+-----------------------------------------------------------------------------------
+How did achieve data driven testing in your BDD framework
+By using scenario outline and along we specify the data inside examples
+Scenario Outline: I want to create multiple organization
+   Given I want to launch the browser
+   And I will navigate to login page by entering the url "http://localhost:8888"
+   When I enter valid username "admin" and password "manager" and click on login button
+   And I will click on organization
+   And In organization page I will click on create organization icon
+   And I enter the organization name "<organizationName>" and click on save button
+   Then I validate that organization name is displayed in the info or not
+   Examples:
+			|organizationName|
+			|Qspiders|
+			|Jspiders|
+			|pySpiders|
+  _------------------------------------------------------------------------------------------
+
+
+difference b/w scenario and scenario outline
+scenario:- If we want to excecute end to end scenario we go for scenario
+scenario outline:- It will execute the same scenario with multiple set of data specified in Examples
+----------------------------------------------------------------------------------------------------
+How will you read data from data table in BDD cucumber
+
+@When("I want to read data in row and column wise")
+	public void i_want_to_read_data_in_row_and_column_wise(DataTable dataTable) {
+	    List<List<Object>> data = dataTable.asLists(String.class);
+	    System.out.println(data.get(2).get(1));
+	    System.out.println(data.get(1).get(1));
+	}

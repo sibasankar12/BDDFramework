@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="1" failed="4" skipped="0">
+<testng-results ignored="0" total="7" passed="4" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-29T13:01:14 IST" name="Default suite" finished-at="2022-03-29T13:02:17 IST" duration-ms="62496">
+  <suite started-at="2022-03-30T15:37:28 IST" name="Default suite" finished-at="2022-03-30T15:40:36 IST" duration-ms="187936">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2022-03-29T13:01:14 IST" name="Default test" finished-at="2022-03-29T13:02:17 IST" duration-ms="62496">
+    <test started-at="2022-03-30T15:37:28 IST" name="Default test" finished-at="2022-03-30T15:40:36 IST" duration-ms="187936">
       <class name="runner.RunnerIO">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:01:14 IST" name="setUpClass" finished-at="2022-03-29T13:01:15 IST" duration-ms="214" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:37:28 IST" name="setUpClass" finished-at="2022-03-30T15:37:29 IST" duration-ms="809" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:01:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-29T13:01:29 IST" duration-ms="14624" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:37:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:38:05 IST" duration-ms="35739" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,31 +27,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
-            <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at stepDefinitions.Hook.afterScenario(Hook.java:45)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:01:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-29T13:01:42 IST" duration-ms="13026" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:38:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:38:39 IST" duration-ms="33701" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -64,31 +43,26 @@ at stepDefinitions.Hook.afterScenario(Hook.java:45)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[Both industry names are not matching expected [Technology] but found [Technology    ]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at stepDefinitions.Hook.afterScenario(Hook.java:45)
+              <![CDATA[java.lang.AssertionError: Both industry names are not matching expected [Technology] but found [Technology    ]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at stepDefinitions.DataDrivenTest.validate_the_organization_name_and_dropdown(DataDrivenTest.java:114)
+at ✽.validate the organization name "Amazon" and dropdown "Technology"(file:///C:/Users/User/git/BDD/BDDFramework/./src/test/java/features/DataDriven.feature:24)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:01:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-29T13:01:56 IST" duration-ms="13324" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:38:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:39:12 IST" duration-ms="33138" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -101,31 +75,26 @@ at stepDefinitions.Hook.afterScenario(Hook.java:45)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[Both industry names are not matching expected [Manufacturing] but found [Manufacturing    ]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at stepDefinitions.Hook.afterScenario(Hook.java:45)
+              <![CDATA[java.lang.AssertionError: Both industry names are not matching expected [Manufacturing] but found [Manufacturing    ]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at stepDefinitions.DataDrivenTest.validate_the_organization_name_and_dropdown(DataDrivenTest.java:114)
+at ✽.validate the organization name "Mintra" and dropdown "Manufacturing"(file:///C:/Users/User/git/BDD/BDDFramework/./src/test/java/features/DataDriven.feature:24)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:01:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-29T13:02:09 IST" duration-ms="13073" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:39:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:39:46 IST" duration-ms="33893" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -138,31 +107,26 @@ at stepDefinitions.Hook.afterScenario(Hook.java:45)
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchSessionException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[Both industry names are not matching expected [Engineering] but found [Engineering    ]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'TYSS-NITHEESHA', ip: '192.168.73.115', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.1'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:442)
-at stepDefinitions.Hook.afterScenario(Hook.java:45)
+              <![CDATA[java.lang.AssertionError: Both industry names are not matching expected [Engineering] but found [Engineering    ]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at stepDefinitions.DataDrivenTest.validate_the_organization_name_and_dropdown(DataDrivenTest.java:114)
+at ✽.validate the organization name "Google" and dropdown "Engineering"(file:///C:/Users/User/git/BDD/BDDFramework/./src/test/java/features/DataDriven.feature:24)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:02:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-29T13:02:17 IST" duration-ms="8190" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:39:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:40:08 IST" duration-ms="22298" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -178,7 +142,39 @@ at stepDefinitions.Hook.afterScenario(Hook.java:45)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunnerIO@1de5f259]" started-at="2022-03-29T13:02:17 IST" name="tearDownClass" finished-at="2022-03-29T13:02:17 IST" duration-ms="7" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:40:08 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:40:23 IST" duration-ms="15384" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["As a user I want to login to application with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:40:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-03-30T15:40:35 IST" duration-ms="11839" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["As a user I will enter invalid username and password for login"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[Login feature]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.RunnerIO@231f98ef]" started-at="2022-03-30T15:40:35 IST" name="tearDownClass" finished-at="2022-03-30T15:40:36 IST" duration-ms="1052" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
