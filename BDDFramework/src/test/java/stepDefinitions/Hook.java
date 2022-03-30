@@ -7,11 +7,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import util.Base;
+import util.Pages;
 import util.PropertyFileutil;
+import util.WebDriverUtil;
 
-public class Hook {
+public class Hook extends WebDriverUtil{
 	private Base base;
 	public Hook(Base base) {
 		this.base=base;
@@ -36,12 +39,16 @@ public class Hook {
 		}
 		base.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		base.driver.manage().window().maximize();
-		
+		Pages.loadPages(base.driver);
 	}
 	
 	@After//(order=1)
-	public void afterScenario() {
+	public void afterScenario(Scenario scenario) throws Throwable {
 		//System.out.println("1st Execute after each scenario's order:1");
+		if(scenario.isFailed()) {
+			//screenshot code
+			takeScreenshot(base.driver, scenario.getName());
+		}
 		base.driver.close();
 	}
 	

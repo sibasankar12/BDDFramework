@@ -9,6 +9,7 @@ Feature: DataDriven Testing
     And click on login
     When Home page is displayed click on create organization
 
+@Fast
   Scenario: Already user in Home page and want create new organization with mandatory fileds
     And click on create new organization Image icon
     And enter organization name as "Google"
