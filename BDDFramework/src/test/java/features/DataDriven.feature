@@ -8,6 +8,7 @@ Feature: DataDriven Testing
     And In login page enter username "admin" and password "admin"
     And click on login
     When Home page is displayed click on create organization
+    And check it
 
 
 @SmokeTest
